@@ -1,0 +1,5 @@
+Case Step of 
+Begin:
+HMI.Sequence.Sub2.Step :="Display Text";
+(*Transition*)
+Sequence.Sub2.Step:="Next Step";
