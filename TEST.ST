@@ -1,8 +1,20 @@
-//CREATE A ST FILE
-case STEP of 
-Begin:
-HMi.sequence.MainSeqSubState := "text";
-//Condition
-
+Module Sequence:
+Case step of 
+Initialization:
+Hmi.Sequence.MainSeqSubState :="Test";
 (*Transition*)
-Sequence.Sub.Step:Next Step;
+Stopped:
+Hmi.Sequence.MainSeqSubState :="Test";
+(*Transition*)
+ Starting: 
+Hmi.Sequence.MainSeqSubState :="Test";
+(*Transition*)
+Running:
+Hmi.Sequence.MainSeqSubState :="Test";
+(*Transition*)
+Stopping:
+Hmi.Sequence.MainSeqSubState :="Test";
+(*Transition*)
+Emergency_Shutodown:
+Hmi.Sequence.MainSeqSubState :="Test";
+(*Transition*)
